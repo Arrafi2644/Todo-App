@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+
 const CompleteTask = ({task}) => {
     // console.log(task)
     const {title} = task;

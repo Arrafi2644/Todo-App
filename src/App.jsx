@@ -6,17 +6,21 @@ import Main from './Main/Main'
 export default function App() {
 
   const [todoTasks, setTodoTasks] = useState([]);
+  const [resetTodo, setResetTodo] = useState([])
 
   const [completeTasks, setCompleteTasks] = useState([]);
 
   useEffect(()=>{
    fetch('todo.json')
    .then(res => res.json())
-   .then(data => setTodoTasks(data))
-  }, [])
+   .then(data => {
+    setTodoTasks(data)
+    setResetTodo(data)
+  }
+  )}, [])
 
   const handleCompleteTask = (task)=>{
-       console.log(task)
+      //  console.log(task)
        const newCompleteTask = [...completeTasks, task];
        setCompleteTasks(newCompleteTask);
 
@@ -26,10 +30,14 @@ export default function App() {
       setTodoTasks(remainingTodoTasks)
 
        }
-
-      
   }
-console.log(completeTasks);
+
+  const handleReset = () => {
+    setTodoTasks(resetTodo);
+    setCompleteTasks([]);
+    
+   }
+// console.log(completeTasks);
 
 
   return (
@@ -38,11 +46,12 @@ console.log(completeTasks);
     }}>
       <h1 className='text-3xl md:text-4xl text-gray-800 text-center my-12 md:my-16'>ToDo APP</h1>
 
-
+   
        <Main 
        handleCompleteTask={handleCompleteTask}
        completeTasks={completeTasks}
        todoTasks={todoTasks}
+       handleReset={handleReset}
        ></Main>
 
 
