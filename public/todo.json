@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Early Rising",
+      "description": "Wake up early and start the day with a fresh mind",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    },
+    {
+      "id": 2,
+      "title": "Complete 5-Time Namaz",
+      "description": "Perform all five daily prayers on time",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    },
+    {
+      "id": 3,
+      "title": "Study for 8 Hours",
+      "description": "Invest at least 8 hours in productive study",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    },
+    {
+      "id": 4,
+      "title": "Be Honest",
+      "description": "Avoid lying and practice honesty throughout the day",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    },
+    {
+      "id": 5,
+      "title": "Good Behavior with Parents",
+      "description": "Maintain a kind and respectful attitude with parents",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    },
+    {
+      "id": 6,
+      "title": "Limit Social Media Use",
+      "description": "Spend no more than 1 hour on social media today",
+      "completed": false,
+      "dueDate": "2024-10-27"
+    }
+  ]
+  
