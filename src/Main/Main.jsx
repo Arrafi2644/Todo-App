@@ -5,12 +5,15 @@ import TodoTasks from "./Todo/TodoTasks";
 import PropTypes from "prop-types";
 
 
-const Main = ({ handleCompleteTask, completeTasks }) => {
+const Main = ({ handleCompleteTask, todoTasks, completeTasks }) => {
 
     // console.log(completeTasks);
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <TodoTasks handleCompleteTask={handleCompleteTask}></TodoTasks>
+            <TodoTasks
+            todoTasks={todoTasks}
+             handleCompleteTask={handleCompleteTask}
+            ></TodoTasks>
             <CompleteTasks
                 completeTasks={completeTasks}
             ></CompleteTasks>
@@ -20,7 +23,8 @@ const Main = ({ handleCompleteTask, completeTasks }) => {
 
 Main.propTypes = {
     handleCompleteTask: PropTypes.func.isRequired,
-    completeTasks: PropTypes.array.isRequired
+    completeTasks: PropTypes.array.isRequired,
+    todoTasks: PropTypes.array.isRequired
 }
 
 export default Main;
