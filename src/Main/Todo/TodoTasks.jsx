@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import TodoTask from "./todoTask";
+import PropTypes from "prop-types";
 
 
 
-const Todo = () => {
+const Todo = ({handleCompleteTask}) => {
     const [todoTasks, setTodoTasks] = useState([]);
 
    useEffect(()=>{
@@ -20,10 +21,18 @@ const Todo = () => {
             <h2 className="test-xl font-bold mb-4">Total Tasks: {todoTasks.length}</h2>
             
             {
-                todoTasks.map(task => <TodoTask key={task.id} task={task}></TodoTask>)
+                todoTasks.map(task => <TodoTask 
+                    key={task.id}
+                     task={task}
+                     handleCompleteTask= {handleCompleteTask}
+                     ></TodoTask>)
             }
         </div>
     );
 };
+
+Todo.propTypes = {
+    handleCompleteTask: PropTypes.func.isRequired
+}
 
 export default Todo;
