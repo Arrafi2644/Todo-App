@@ -5,7 +5,7 @@ const TodoTask = ({task, handleCompleteTask}) => {
     // console.log(task)
     const {title, description} = task;
     return (
-        <div className="border p-6 rounded-xl mb-6 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+        <div className="border p-6 rounded-xl mb-6 flex flex-col md:flex-row gap-4 items-end md:items-center justify-between">
             
             <div>
             <h2 className="font-bold text-gray-800">Task: {title}</h2>
